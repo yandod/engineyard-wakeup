@@ -30,7 +30,9 @@ $ ./bin/ey-wakeup boot \
 -utility0=utilname \
 -utility0-size=m3_medium \
 -utility0-volume=5 \
--utility0-iops=500
+-utility0-iops=500 \
+-username=myuser
+-password=mypass
 $ ey environments -a=todo
 your-account/todo
     testenv                       [ production ]  3 instances
@@ -39,7 +41,7 @@ your-account/todo
 ### Stop running environment
 
 ```
-$ ./bin/ey-wakeup stop -e=testenv
+$ ./bin/ey-wakeup stop -e=testenv -username=myuser -password=mypass
 $ ey environments -a=todo
 your-account/todo
     testenv                       [ production ]  (stopped)
