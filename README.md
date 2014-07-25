@@ -1,6 +1,9 @@
 # Engineyard::Wakeup
 
 Boot and stop existing environment on Engine Yard Cloud.
+This gem click Boot/Stop button through Capybara.
+
+Boot command require all needed parameters on the procedure.
 
 ## Installation
 
@@ -14,8 +17,7 @@ Boot and stop existing environment on Engine Yard Cloud.
 $ ey environments -a=todo
 your-account/todo
     testenv                       [ production ]  (stopped)
-$ ./bin/ey-wakeup boot \
--e=testenv \
+$ ./bin/ey-wakeup boot -e=testenv \
 -ip=54.83.57.226 \
 -apps=2 \
 -apps-size=m3_medium　\
@@ -35,7 +37,7 @@ $ ./bin/ey-wakeup boot \
 -password=mypass
 $ ey environments -a=todo
 your-account/todo
-    testenv                       [ production ]  3 instances
+    testenv                       [ production ]  5 instances
 ```
 
 ### Stop running environment
